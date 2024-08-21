@@ -14,5 +14,7 @@ The second folder is regarding the Tables used in the paper. This represents a c
 The dataset mainly consists in data from political party affiliations and electoral candidate characteristcs from Brazil. This dataset used to be publicly available but was removed from public access due to the LGPD ("Lei Geral de Proteção de Dados"), the data protection law (similar to the GDPR). This is the reason that the researchers are not allowed to share the original versions (identified or identifiable) of those datasets.
 If you have access to the original dataset (tables with the least of individuals filiated to each political party, by year and state), we are glad to check if the sample is similar to ours, and we would clearly help replicating the construction of the consolidated databases.
 
-* ##################### Downloading the Dataset (agregated)
-  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+* ##################### Downloading the Dataset (consolidated)
+Due to the size of the consolidated database, you should be able to download it from XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.
+
+If you have any doubts or struggle to replicate the results, don't hesitate to contact us.
