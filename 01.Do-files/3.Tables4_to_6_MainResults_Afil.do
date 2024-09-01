@@ -1,0 +1,148 @@
+
+clear
+use filiou_desfiliou_tratada
+
+capture drop  disp_de_d_fil_ROB disp_de_e_fil_ROB disp_ec_e_fil_ROB disp_ec_c_fil_ROB disp_dc_d_fil_ROB disp_dc_c_fil_ROB disp_de_d_desfil_ROB disp_de_e_desfil_ROB disp_ec_e_desfil_ROB disp_ec_c_desfil_ROB disp_dc_d_desfil_ROB disp_dc_c_desfil_ROB d_dir_esq_ROB d_dir_ctr_ROB d_esq_ctr_ROB d_fil_direita_ROB d_fil_centro_ROB d_fil_esquerda_ROB
+* ################################################################################################################################ MAIN RESULTS WITH ROBUSTNESS TESTS ########################
+* ################################################################################################################################ MAIN RESULTS WITH ROBUSTNESS TESTS ########################
+* ################################################################################################################################ MAIN RESULTS WITH ROBUSTNESS TESTS ########################
+* ################################################################################################################################ MAIN RESULTS WITH ROBUSTNESS TESTS ########################
+* ################################################################################################################################ MAIN RESULTS WITH ROBUSTNESS TESTS ########################
+
+capture log close
+log using Tables4to6.log, replace
+capture erase TableResultsAfil.xml
+
+* DE efeito na direita - Table 4 - Top
+rdrobust disp_de_d_fil margem_vit if 	d_dir_esq==1 & (antes_eleicoes==1) , vce(cluster codigo_ibge) p (1) all h (0.122) b (0.216)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_d_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.193) b (0.357)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_d_fil margem_vit if 	d_dir_esq==1 & (doisanos_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.166) b (0.304)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_d_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.253) b (0.422)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_d_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (2) all h (0.248) b (0.391) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")
+rdrobust disp_de_d_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (2) all h (0.223) b (0.318) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_d_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.193) b (0.10) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_d_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.253) b (0.10)  
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_d_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.193) b (0.40) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_d_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.253) b (0.40)  
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+
+* DC efeito na direita - Table 4 - Bottom
+rdrobust disp_dc_d_fil margem_vit if 	d_dir_ctr==1 & (antes_eleicoes==1) , vce(cluster codigo_ibge) 	p (1) all h (0.148) b (0.243)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_d_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge) 	p (1) all h (0.133) b (0.228)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_d_fil margem_vit if 	d_dir_ctr==1 & (doisanos_eleicoes==1) , vce(cluster codigo_ibge) 	p (1) all h (0.150) b (0.243)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_d_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge) 	p (1) all h (0.136) b (0.233)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_d_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (2) all h (0.190) b (0.306) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_d_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (2) all h (0.262) b (0.405) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_d_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.133) b (0.10) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_d_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.136) b (0.10)  
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_d_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.133) b (0.40) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_d_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.136) b (0.40)  
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results") 
+
+* DE efeito na esquerda - Table 5 - Top
+rdrobust disp_de_e_fil margem_vit if 	d_dir_esq==1 & (antes_eleicoes==1) , vce(cluster codigo_ibge) p (1) all h (0.122) b (0.213)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_e_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.142) b (0.279)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_e_fil margem_vit if 	d_dir_esq==1 & (doisanos_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.158) b (0.299)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_e_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.21) b (0.397)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_e_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (2) all h (0.219) b (0.361) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_e_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (2) all h (0.248) b (0.446) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_e_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.142) b (0.10) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_e_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.21) b (0.10)  
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_e_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.142) b (0.40) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_de_e_fil margem_vit if 	d_dir_esq==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.21) b (0.40)  
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+
+* EC efeito na esquerda - Table 5 - Bottom
+rdrobust disp_ec_e_fil margem_vit if 	d_esq_ctr==1 & (antes_eleicoes==1) , vce(cluster codigo_ibge) 	p (1) all h (0.107) b (0.202)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_e_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge) p (1) all h (0.122) b (0.236)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_e_fil margem_vit if 	d_esq_ctr==1 & (doisanos_eleicoes==1) , vce(cluster codigo_ibge) p (1) all h (0.129) b (0.228)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_e_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge) p (1) all h (0.120) b (0.227)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_e_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (2) all h (0.170) b (0.299) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_e_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (2) all h (0.192) b (0.303) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_e_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.122) b (0.10) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_e_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.120) b (0.10)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_e_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.122) b (0.40) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_e_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.120) b (0.40)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+
+* DC efeito no centro - Table 6 - Top
+rdrobust disp_dc_c_fil margem_vit if 	d_dir_ctr==1 & (antes_eleicoes==1) , vce(cluster codigo_ibge) 	p (1) all h (0.130) b (0.210)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_c_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge) 	p (1) all h (0.154) b (0.259)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_c_fil margem_vit if 	d_dir_ctr==1 & (doisanos_eleicoes==1) , vce(cluster codigo_ibge) 	p (1) all h (0.193) b (0.323)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_c_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge) 	p (1) all h (0.137) b (0.242)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_c_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (2) all h (0.208) b (0.333) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_c_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (2) all h (0.240) b (0.367) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_c_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.154) b (0.10) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_c_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.137) b (0.10)  
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_c_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.154) b (0.40) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_dc_c_fil margem_vit if 	d_dir_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.137) b (0.40)  
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results") 
+
+* EC efeito no centro - Table 6 - Bottom
+rdrobust disp_ec_c_fil margem_vit if 	d_esq_ctr==1 & (antes_eleicoes==1) , vce(cluster codigo_ibge) 	p (1) all h (0.101) b (0.186)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_c_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge) p (1) all h (0.121) b (0.218)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_c_fil margem_vit if 	d_esq_ctr==1 & (doisanos_eleicoes==1) , vce(cluster codigo_ibge) p (1) all h (0.159) b (0.277)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_c_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge) p (1) all h (0.154) b (0.255)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_c_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (2) all h (0.172) b (0.275) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_c_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (2) all h (0.185) b (0.281) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_c_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.121) b (0.10) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_c_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.154) b (0.10)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_c_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1) , vce(cluster codigo_ibge)	p (1) all h (0.121) b (0.40) 
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+rdrobust disp_ec_c_fil margem_vit if 	d_esq_ctr==1 & (todas_eleicoes==1)  & reeleito == 1, vce(cluster codigo_ibge)	p (1) all h (0.154) b (0.40)
+outreg2 using TableResultsAfil, excel label append nonotes title("Table Results")  
+
+ capture log close
