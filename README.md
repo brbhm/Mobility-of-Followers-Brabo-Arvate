@@ -1,4 +1,4 @@
-Update date: Aug 23rd, 2024
+Update date: Sep 1st, 2024
 
 Welcome to the Repository of Files for the paper "Is the mobility of followers explained by dissimilarity/similarity of ideology in leader-follower dyads?", written by Henrique Brabo and Paulo Arvate.
 Any doubts or inquires, please send an e-mail to paulo.arvate@gmail.com (corresponding Author) or henrique.minetto@gmail.com.
