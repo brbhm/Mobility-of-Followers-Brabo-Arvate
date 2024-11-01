@@ -16,6 +16,6 @@ If you have access to the original dataset (tables with the least of individuals
 
 * ##################### Downloading the Dataset (consolidated)
 Due to the size of the consolidated database, you should be able to download it from (https://1drv.ms/f/c/9339fddb08494cba/EuWWfGDlEqNEpLJBrH9OFTUBxvrhhXuHh1LXBxxjglPHFg?e=lfoYka)
-password: "2024MobilityofFollowers." without the "", but with the period/full-stop in the end.
+password: "" without the "", but with the period/full-stop in the end.
 
 If you have any doubts or struggle to replicate the results, don't hesitate to contact us.
