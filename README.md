@@ -6,7 +6,7 @@ Any doubts or inquires, please send an e-mail to paulo.arvate@fgv.br (correspond
 The Do-files presented here were developed using Stata 17-MP64, in a 32GB RAM computer.
 
 * ##################### Navegating in the Repository
-The current repository consists mainly in two folders. The first one is regarding the Do-files. The main do-file ("Mobility of Followers") also runs all the other do-files. The second folder is regarding the ado files to grant replicability.
+The current repository consists mainly in two folders. The first one is regarding the Do-files. The main do-file ("0.Mobility_of_Followers") also runs all the other do-files. The second folder is regarding the ado files to grant replicability.
 So, with all the do-files downloaded (as well as the database), you should be able to replicate all findings and results.
 
 * ##################### Disclaimer About the Dataset
