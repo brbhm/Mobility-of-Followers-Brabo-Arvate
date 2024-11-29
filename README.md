@@ -14,6 +14,6 @@ The dataset mainly consists in data from political party affiliations and electo
 If you have access to the original dataset (tables with the least of individuals filiated to each political party, by year and state), we are glad to check if the sample is similar to ours, and we would clearly help replicating the construction of the consolidated databases.
 
 * ##################### Downloading the Dataset (consolidated)
-Due to the size of the consolidated database, you should be able to download it from (https://1drv.ms/f/c/9339fddb08494cba/EuWWfGDlEqNEpLJBrH9OFTUBxvrhhXuHh1LXBxxjglPHFg?e=lfoYka). Password will be provided in the Cover Letter.
+Due to the size of the consolidated database, you should be able to download it from (https://1drv.ms/f/c/9339fddb08494cba/EuWWfGDlEqNEpLJBrH9OFTUB0qQbe-qwOleiRWK-9dD8Uw?e=uWL9jM). Password will be provided in the Cover Letter.
 
 If you have any doubts or struggle to replicate the results, don't hesitate to contact us.
